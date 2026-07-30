@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Παλλήνιοι Δρομείς</title>
+<style>
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0B5D1E;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #8BC34A;
+    color: white;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* MENU */
+
+.top-menu {
+    width: 100%;
+    background-color: #0B5D1E;
+    padding: 10px 0;
+}
+
+.top-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.top-menu a {
+
+    display: block;
+    padding: 12px 28px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    background-color: #0B5D1E;
+
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
+}
+
+
+.top-menu a:hover {
+
+    background-color: #8BC34A;
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* HEADER */
+
+.header {
+
+    width: 100%;
+    max-width: 960px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    background-color: white;
+
+    box-sizing: border-box;
+
+    border-bottom: 2px solid #0B5D1E;
+
+}
+
+
+.title {
+
+    font-size: 48px;
+    font-weight: bold;
+
+    color: #0B5D1E;
+
+    margin:0;
+
+}
+
+
+.logo {
+
+    max-width:220px;
+    height:auto;
+
+}
+
+
+/* CONTENT */
+
+.content {
+
+    width:100%;
+    max-width:960px;
+
+    margin:40px 20px;
+
+    background:white;
+
+    padding:30px;
+
+    box-sizing:border-box;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+
+}
+
+
+h2 {
+
+    color:#0B5D1E;
+
+    margin-top:0;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+
+
+p {
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    text-align:center;
+
+}
+
+
+/* TABLE */
+
+table {
+
+    border-collapse:collapse;
+
+    width:100%;
+
+    font-size:16px;
+
+    margin-top:30px;
+
+}
+
+
+th, td {
+
+    border:1px solid #999;
+
+    padding:12px;
+
+    text-align:left;
+
+}
+
+
+th {
+
+    background-color:#0B5D1E;
+
+    color:white;
+
+}
+
+
+tr:nth-child(even){
+
+    background-color:#f2f2f2;
+
+}
+
+
+/* SOCIAL */
+
+.social-links {
+
+    text-align:center;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+}
+
+
+.social-links a {
+
+    color:#0000EE;
+
+    text-decoration:underline;
+
+}
+
+
+.social-links a:hover {
+
+    color:#8BC34A;
+
+}
+
+
+
+/* FOOTER */
+
+
+.footer {
+
+    margin-top:auto;
+
+    padding:20px;
+
+    text-align:center;
+
+    color:gray;
+
+    font-size:14px;
+
+}
+
+
+
+/* MOBILE */
+
+@media screen and (max-width:600px){
+
+.header {
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.title {
+
+    font-size:36px;
+
+}
+
+
+.logo {
+
+    margin-top:20px;
+
+}
+
+
+.top-menu ul {
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.top-menu a {
+
+    width:200px;
+
+    text-align:center;
+
+}
+
+
+}
+
+
+</style>
+</head>
+<body>
+<nav class="top-menu">
+<ul><li><a href="index.html">Αρχική</a></li>
+<li><a href="link1.html">Ο Σύλλογος</a></li>
+<li><a href="link2.html">Δραστηριότητες</a></li>
+<li><a href="link3.html">Αγώνες</a></li>
+<li><a href="link4.html">Επικοινωνία</a></li>
+</ul>
+</nav>
+<header class="header">
+<h1 class="title">ΠΑΛΛΗΝΙΟΙ ΔΡΟΜΕΙΣ</h1>
+<img alt="Παλλήνιοι Δρομείς Logo" class="logo" src="Παλλήνιοι Δρομείς Logo High resolution.jpg"/>
+</header>
+
+
+<main class="content"><section class="content">    
+
+
+
+    <div style="
+        margin-top:40px;
+        padding:30px;
+        background:#f2f8f3;
+        border-radius:12px;
+        border-left:6px solid #0B5D1E;
+        text-align:left;
+    ">
+
+        <h2 style="
+            color:#0B5D1E;
+            text-align:center;
+            margin-bottom:25px;
+        ">
+Δραστηριότητες Συλλόγου</h2>
+
+            <h3>➜ Παλλήνιος Δρόμος</h3>
+
+            <p>
+                Το 2026 πραγματοποιήθηκε με μεγάλη επιτυχία ο
+                <strong>3ος Παλλήνιος Δρόμος</strong>
+                στην Παλλήνη Αττικής.
+                Η διοργάνωση περιλάμβανε αγώνες
+                <strong>5 km</strong>,
+                <strong>10 km</strong>
+                και παιδικό αγώνα
+                <strong>1.000 μέτρων</strong>,
+                προσελκύοντας εκατοντάδες δρομείς από όλη την Ελλάδα.
+            </p>
+
+            <h3>➜ Ετήσια κοπή πίτας</h3>
+
+            <p>
+                Κάθε χρόνο διοργανώνεται η καθιερωμένη εκδήλωση κοπής της
+                πρωτοχρονιάτικης πίτας, όπου βραβεύονται οι αθλητές του συλλόγου,
+                πραγματοποιούνται κληρώσεις δώρων και τα μέλη έχουν την ευκαιρία
+                να συναντηθούν σε μια όμορφη γιορτινή βραδιά.
+            </p>
+            <h3>➜ Ομαδικές συμμετοχές σε αγώνες</h3>
+
+            <p>
+                Οι Παλλήνιοι Δρομείς συμμετέχουμε οργανωμένα σε δεκάδες αγώνες
+                δρόμου σε όλη την Ελλάδα. Κάθε χρόνο πραγματοποιούνται ομαδικές
+                εγγραφές, με κορυφαία στιγμή τη συμμετοχή στον Αυθεντικό
+                Μαραθώνιο της Αθήνας, όπου το 2025 ο σύλλογος συμμετείχε με
+                περίπου 70 δρομείς.
+            </p>
+
+            <h3>➜ Ομαδικές προπονήσεις</h3>
+
+            <p>
+                Οι εβδομαδιαίες ομαδικές προπονήσεις αποτελούν βασικό κομμάτι
+                της λειτουργίας του συλλόγου. Προπονούμαστε σε άσφαλτο και
+                βουνό, απολαμβάνοντας τη χαρά του τρεξίματος με ασφάλεια,
+                παρέα και αλληλοϋποστήριξη.
+            </p>
+
+            <h3>➜ Φιλανθρωπικές δράσεις</h3>
+
+            <p>
+                Ο σύλλογος συμμετέχει ενεργά σε δράσεις κοινωνικής προσφοράς,
+                προσφέροντας οικονομική βοήθεια ή είδη πρώτης ανάγκης σε
+                ανθρώπους και φορείς που έχουν ανάγκη. Πιστεύουμε ότι ο
+                αθλητισμός μπορεί να συμβάλλει ουσιαστικά και στην κοινωνική
+                αλληλεγγύη.
+            </p>
+
+    </div>
+<BR>
+
+
+    </div>
+
+
+
+<BR>
+
+    <a class="button"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSdyOeB3TkOv_56ZEMAT5_7VvpptlENomtCvIJDAaizdkoRzAA/viewform"
+       target="_blank">
+        Γίνε μέλος των Παλλήνιων Δρομέων
+    </a>
+
+
+    <br>
+
+
+
+<footer class="footer">
+
+Powered by EmyBerry
+
+</footer>
+</body>
+</html>
