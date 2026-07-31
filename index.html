@@ -1,350 +1,542 @@
 <!DOCTYPE html>
-
 <html lang="el">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Παλλήνιοι Δρομείς</title>
+
 <style>
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
+    margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+    background:#f5f5f5;
 }
 
 
-/* MENU */
-
-.top-menu {
-    width: 100%;
-    background-color: #0B5D1E;
-    padding: 10px 0;
-}
-
-.top-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-.top-menu a {
-
-    display: block;
-    padding: 12px 28px;
-
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-
-    background-color: #0B5D1E;
-
-    border-radius: 25px;
-
-    transition: all 0.3s ease;
-}
+/* ================= NAVIGATION ================= */
 
 
-.top-menu a:hover {
+.navbar {
 
-    background-color: #8BC34A;
-    color: white;
+    width:100%;
+    background:#0B5D1E;
 
-    transform: translateY(-2px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:10px 30px;
 
 }
 
 
-/* HEADER */
+/* LOGO MENU */
+
+.nav-logo {
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+
+}
+
+
+.nav-logo img {
+
+    width:55px;
+    height:55px;
+    object-fit:contain;
+
+}
+
+
+
+/* LINKS */
+
+.nav-links {
+
+    display:flex;
+    list-style:none;
+    gap:12px;
+
+    margin:0;
+    padding:0;
+
+}
+
+
+.nav-links a {
+
+    color:white;
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    transition:0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    background:#8BC34A;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* HAMBURGER */
+
+
+.hamburger {
+
+    display:none;
+
+    color:white;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+/* ================= HEADER ================= */
+
 
 .header {
 
-    width: 100%;
-    max-width: 960px;
+    max-width:960px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin:auto;
 
-    padding: 30px 20px;
+    background:white;
 
-    background-color: white;
+    display:flex;
 
-    box-sizing: border-box;
+    justify-content:center;
 
-    border-bottom: 2px solid #0B5D1E;
+    align-items:center;
+
+    padding:35px 20px;
 
 }
 
 
 .title {
 
-    font-size: 48px;
-    font-weight: bold;
+    color:#0B5D1E;
 
-    color: #0B5D1E;
+    font-size:48px;
 
     margin:0;
 
-}
-
-
-.logo {
-
-    max-width:220px;
-    height:auto;
+    text-align:center;
 
 }
 
 
-/* CONTENT */
+
+.logo-main {
+
+    display:none;
+
+}
+
+
+
+/* ================= CONTENT ================= */
+
 
 .content {
 
-    width:100%;
     max-width:960px;
 
-    margin:40px 20px;
+    margin:30px auto;
 
     background:white;
 
     padding:30px;
 
-    box-sizing:border-box;
+    border-radius:15px;
 
-    border-radius:12px;
-
-    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    box-shadow:0 5px 20px rgba(0,0,0,0.12);
 
 }
+
 
 
 h2 {
 
     color:#0B5D1E;
 
-    margin-top:0;
-
-    margin-bottom:20px;
-
     text-align:center;
 
 }
 
 
-
-p {
-
-    font-size:16px;
-
-    line-height:1.5;
-
-    text-align:center;
-
-}
-
-
-/* TABLE */
 
 table {
 
-    border-collapse:collapse;
-
     width:100%;
 
-    font-size:16px;
+    border-collapse:collapse;
 
-    margin-top:30px;
+    margin-top:25px;
 
 }
 
 
-th, td {
 
-    border:1px solid #999;
+td {
+
+    border:1px solid #aaa;
 
     padding:12px;
 
-    text-align:left;
-
 }
 
-
-th {
-
-    background-color:#0B5D1E;
-
-    color:white;
-
-}
 
 
 tr:nth-child(even){
 
-    background-color:#f2f2f2;
-
-}
-
-
-/* SOCIAL */
-
-.social-links {
-
-    text-align:center;
-
-    line-height:1.6;
-
-    font-size:14px;
-
-}
-
-
-.social-links a {
-
-    color:#0000EE;
-
-    text-decoration:underline;
-
-}
-
-
-.social-links a:hover {
-
-    color:#8BC34A;
+    background:#f2f2f2;
 
 }
 
 
 
-/* FOOTER */
+
+/* ================= FOOTER ================= */
 
 
 .footer {
 
-    margin-top:auto;
-
-    padding:20px;
-
     text-align:center;
 
-    color:gray;
+    padding:25px;
 
-    font-size:14px;
+    color:#777;
 
 }
 
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
-@media screen and (max-width:600px){
 
-.header {
+@media(max-width:700px){
+
+
+
+.navbar {
+
+    padding:10px 15px;
+
+}
+
+
+.nav-logo {
+
+    font-size:18px;
+
+}
+
+
+.nav-logo img {
+
+    width:45px;
+
+    height:45px;
+
+}
+
+
+
+.hamburger {
+
+    display:block;
+
+}
+
+
+
+/* κρυφό menu */
+
+.nav-links {
+
+    position:absolute;
+
+    top:65px;
+
+    right:15px;
+
+    width:240px;
+
+    background:#0B5D1E;
+
+    border-radius:15px;
 
     flex-direction:column;
 
-    text-align:center;
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    pointer-events:none;
+
+    transition:0.3s;
 
 }
+
+
+.nav-links.show {
+
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+
+
+}
+
+
+
+.nav-links li {
+
+    width:100%;
+
+}
+
+
+
+.nav-links a {
+
+    display:block;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:0;
+
+}
+
+
+
+.header {
+
+    padding:25px 15px;
+
+}
+
 
 
 .title {
 
-    font-size:36px;
+    font-size:34px;
 
 }
 
 
-.logo {
 
-    margin-top:20px;
+.content {
 
-}
+    margin:15px;
 
-
-.top-menu ul {
-
-    flex-direction:column;
-
-    align-items:center;
+    padding:20px;
 
 }
 
 
-.top-menu a {
-
-    width:200px;
-
-    text-align:center;
 
 }
 
 
-}
 
 
 </style>
+
 </head>
+
+
+
 <body>
-<nav class="top-menu">
-<ul><li><a href="index.html">Αρχική</a></li>
-<li><a href="link1.html">Ο Σύλλογος</a></li>
-<li><a href="link2.html">Δραστηριότητες</a></li>
-<li><a href="link3.html">Αγώνες</a></li>
-<li><a href="link4.html">Επικοινωνία</a></li>
+
+
+
+<!-- MENU -->
+
+<nav class="navbar">
+
+
+<div class="nav-logo">
+
+<img src="Παλλήνιοι Δρομείς Logo High resolution.jpg">
+
+<span>
+Παλλήνιοι Δρομείς
+</span>
+
+</div>
+
+
+
+<div class="hamburger" onclick="toggleMenu()">
+
+☰
+
+</div>
+
+
+
+<ul class="nav-links" id="navLinks">
+
+
+<li>
+<a href="index.html">Αρχική</a>
+</li>
+
+
+<li>
+<a href="link1.html">Ο Σύλλογος</a>
+</li>
+
+
+<li>
+<a href="link2.html">Δραστηριότητες</a>
+</li>
+
+
+<li>
+<a href="link3.html">Αγώνες</a>
+</li>
+
+
+<li>
+<a href="link4.html">Επικοινωνία</a>
+</li>
+
+
 </ul>
+
+
+
 </nav>
-<header class="header">
-<h1 class="title">ΠΑΛΛΗΝΙΟΙ ΔΡΟΜΕΙΣ</h1>
-<img alt="Παλλήνιοι Δρομείς Logo" class="logo" src="Παλλήνιοι Δρομείς Logo High resolution.jpg"/>
-</header>
+
+
+<!-- ΠΕΡΙΕΧΟΜΕΝΟ -->
+
+
 <main class="content">
-<section class="board">
-<h2>Διοικητικό Συμβούλιο</h2>
+
+<h2>
+Διοικητικό Συμβούλιο Παλλήνιων Δρομέων
+</h2>
+
 <table>
+
+
 <tr>
 <td>Γιώργος Καραναστάσης</td>
 <td>Πρόεδρος</td>
 </tr>
+
+
 <tr>
 <td>Σωτήρης Γοργότσιας</td>
 <td>Αντιπρόεδρος</td>
 </tr>
+
+
 <tr>
 <td>Χρυσόθεμις Καμτσιώρα</td>
 <td>Γραμματέας</td>
 </tr>
+
+
 <tr>
 <td>Θανάσης Πάφος</td>
 <td>Ταμίας</td>
 </tr>
+
+
 <tr>
 <td>Μαρία Φράγκου</td>
 <td>Μέλος</td>
 </tr>
+
+
 <tr>
 <td>Διονύσης Σαρδελάς</td>
 <td>Μέλος</td>
 </tr>
+
+
 <tr>
 <td>Μανώλης Μαρκάκης</td>
 <td>Μέλος</td>
 </tr>
+
+
 </table>
-</section>
+
+
 </main>
+
+
+
+
 
 <footer class="footer">
 
 Powered by EmyBerry
 
 </footer>
+
+
+
+
+
+<script>
+
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("show");
+
+}
+
+
+</script>
+
+
+
 </body>
+
 </html>

@@ -1,240 +1,371 @@
 <!DOCTYPE html>
-
 <html lang="el">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Παλλήνιοι Δρομείς</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Επικοινωνία - Παλλήνιοι Δρομείς</title>
+
+
+
 <style>
 
+
+* {
+
+    box-sizing:border-box;
+
+}
+
+
+
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
 
+    margin:0;
 
-/* MENU */
+    font-family:Arial, Helvetica, sans-serif;
 
-.top-menu {
-    width: 100%;
-    background-color: #0B5D1E;
-    padding: 10px 0;
-}
+    background:#f5f5f5;
 
-.top-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-.top-menu a {
-
-    display: block;
-    padding: 12px 28px;
-
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-
-    background-color: #0B5D1E;
-
-    border-radius: 25px;
-
-    transition: all 0.3s ease;
-}
-
-
-.top-menu a:hover {
-
-    background-color: #8BC34A;
-    color: white;
-
-    transform: translateY(-2px);
+    color:#333;
 
 }
 
 
-/* HEADER */
+
+
+
+
+/* ================= MENU ================= */
+
+
+.navbar {
+
+    width:100%;
+
+    background:#0B5D1E;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:10px 30px;
+
+}
+
+
+
+.nav-logo {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+.nav-logo img {
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:contain;
+
+}
+
+
+
+
+
+.nav-links {
+
+    display:flex;
+
+    list-style:none;
+
+    gap:12px;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+
+.nav-links a {
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    transition:0.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+    background:#8BC34A;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+.hamburger {
+
+    display:none;
+
+    color:white;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+/* ================= HEADER ================= */
+
 
 .header {
 
-    width: 100%;
-    max-width: 960px;
+    max-width:960px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin:auto;
 
-    padding: 30px 20px;
+    background:white;
 
-    background-color: white;
+    padding:35px 20px;
 
-    box-sizing: border-box;
-
-    border-bottom: 2px solid #0B5D1E;
+    text-align:center;
 
 }
+
 
 
 .title {
 
-    font-size: 48px;
-    font-weight: bold;
+    color:#0B5D1E;
 
-    color: #0B5D1E;
+    font-size:48px;
 
     margin:0;
 
 }
 
 
-.logo {
-
-    max-width:220px;
-    height:auto;
-
-}
 
 
-/* CONTENT */
 
-.content {
 
-    width:100%;
+
+/* ================= CONTACT ================= */
+
+
+.contact {
+
     max-width:960px;
 
-    margin:40px 20px;
+    margin:35px auto;
 
     background:white;
 
-    padding:30px;
+    padding:35px;
 
-    box-sizing:border-box;
+    border-radius:15px;
 
-    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
 
-    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    text-align:center;
 
 }
 
 
-h2 {
+
+.contact h2 {
 
     color:#0B5D1E;
 
+    font-size:30px;
+
     margin-top:0;
 
-    margin-bottom:20px;
+}
 
-    text-align:center;
+
+
+
+
+.email-box {
+
+    background:#f2f8f3;
+
+    border-left:5px solid #0B5D1E;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    margin:25px auto;
+
+    max-width:500px;
 
 }
 
 
 
-p {
+.email-box a {
 
-    font-size:16px;
+    color:#0B5D1E;
 
-    line-height:1.5;
+    text-decoration:none;
 
-    text-align:center;
-
-}
-
-
-/* TABLE */
-
-table {
-
-    border-collapse:collapse;
-
-    width:100%;
-
-    font-size:16px;
-
-    margin-top:30px;
+    font-weight:bold;
 
 }
 
 
-th, td {
 
-    border:1px solid #999;
 
-    padding:12px;
+.social-title {
 
-    text-align:left;
+    margin-top:35px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#0B5D1E;
 
 }
 
 
-th {
 
-    background-color:#0B5D1E;
+
+.social-button {
+
+    display:inline-block;
+
+    margin:15px 10px;
+
+    padding:14px 30px;
+
+    background:#0B5D1E;
 
     color:white;
 
-}
+    text-decoration:none;
 
+    border-radius:30px;
 
-tr:nth-child(even){
+    font-weight:bold;
 
-    background-color:#f2f2f2;
-
-}
-
-
-/* SOCIAL */
-
-.social-links {
-
-    text-align:center;
-
-    line-height:1.6;
-
-    font-size:14px;
-
-}
-
-
-.social-links a {
-
-    color:#0000EE;
-
-    text-decoration:underline;
-
-}
-
-
-.social-links a:hover {
-
-    color:#8BC34A;
+    transition:0.3s;
 
 }
 
 
 
-/* FOOTER */
+.social-button:hover {
+
+    background:#8BC34A;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+/* ================= MEMBER BUTTON ================= */
+
+
+.member-button {
+
+    display:block;
+
+    width:max-content;
+
+    margin:35px auto;
+
+    padding:15px 35px;
+
+    background:#0B5D1E;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    border-radius:35px;
+
+    transition:0.3s;
+
+}
+
+
+
+.member-button:hover {
+
+    background:#8BC34A;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+/* ================= FOOTER ================= */
 
 
 .footer {
 
-    margin-top:auto;
-
-    padding:20px;
-
     text-align:center;
 
-    color:gray;
+    padding:25px;
+
+    color:#777;
 
     font-size:14px;
 
@@ -242,75 +373,358 @@ tr:nth-child(even){
 
 
 
-/* MOBILE */
 
-@media screen and (max-width:600px){
 
-.header {
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:700px){
+
+
+.navbar {
+
+    padding:10px 15px;
+
+}
+
+
+
+.nav-logo {
+
+    font-size:18px;
+
+}
+
+
+
+.nav-logo img {
+
+    width:45px;
+
+    height:45px;
+
+}
+
+
+
+.hamburger {
+
+    display:block;
+
+}
+
+
+
+
+.nav-links {
+
+    position:absolute;
+
+    top:65px;
+
+    right:15px;
+
+    width:240px;
+
+    background:#0B5D1E;
+
+    border-radius:15px;
 
     flex-direction:column;
 
-    text-align:center;
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    pointer-events:none;
+
+    transition:0.3s;
 
 }
+
+
+
+.nav-links.show {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+
+}
+
+
+
+.nav-links li {
+
+    width:100%;
+
+}
+
+
+
+.nav-links a {
+
+    display:block;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:0;
+
+}
+
+
+
+
+.header {
+
+    padding:25px 15px;
+
+}
+
 
 
 .title {
 
-    font-size:36px;
+    font-size:34px;
 
 }
 
 
-.logo {
 
-    margin-top:20px;
+.contact {
 
-}
+    margin:20px 15px;
 
-
-.top-menu ul {
-
-    flex-direction:column;
-
-    align-items:center;
+    padding:25px;
 
 }
 
 
-.top-menu a {
 
-    width:200px;
+.social-button {
 
-    text-align:center;
+    display:block;
+
+    margin:15px auto;
+
+    width:90%;
 
 }
 
 
+
 }
+
 
 
 </style>
+
+
 </head>
+
 <body>
-<nav class="top-menu">
-<ul><li><a href="index.html">Αρχική</a></li>
-<li><a href="link1.html">Ο Σύλλογος</a></li>
-<li><a href="link2.html">Δραστηριότητες</a></li>
-<li><a href="link3.html">Αγώνες</a></li>
-<li><a href="link4.html">Επικοινωνία</a></li>
+
+
+
+<!-- ================= MENU ================= -->
+
+
+<nav class="navbar">
+
+
+<div class="nav-logo">
+
+
+<img src="Παλλήνιοι Δρομείς Logo High resolution.jpg"
+     alt="Παλλήνιοι Δρομείς Logo">
+
+
+<span>
+Παλλήνιοι Δρομείς
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="hamburger" onclick="toggleMenu()">
+
+☰
+
+</div>
+
+
+
+
+
+<ul class="nav-links" id="navLinks">
+
+
+<li>
+<a href="index.html">Αρχική</a>
+</li>
+
+
+<li>
+<a href="link1.html">Ο Σύλλογος</a>
+</li>
+
+
+<li>
+<a href="link2.html">Δραστηριότητες</a>
+</li>
+
+
+<li>
+<a href="link3.html">Αγώνες</a>
+</li>
+
+
+<li>
+<a href="link4.html">Επικοινωνία</a>
+</li>
+
+
 </ul>
+
 </nav>
-<header class="header">
-<h1 class="title">ΠΑΛΛΗΝΙΟΙ ΔΡΟΜΕΙΣ</h1>
-<img alt="Παλλήνιοι Δρομείς Logo" class="logo" src="Παλλήνιοι Δρομείς Logo High resolution.jpg"/>
-</header>
+
+<!-- ================= CONTACT ================= -->
 
 
-<main class="content"><section class="content"><h2>Επικοινωνία</h2><p><strong>Email:</strong><br/>pallinioidromeis@gmail.com<br/>pallinioidromeis@yahoo.com</p></section></main>
+<main class="contact">
 
-<section class="contact"><div class="social-links"><strong>Follow us on Instagram</strong><br/><a href="https://www.instagram.com/pallinioidromeis/" target="_blank">@pallinioidromeis</a><br/><br/><strong>Follow us on Facebook</strong><br/><a href="https://www.facebook.com/PALLINI0IDR0MEIS" target="_blank">@Παλλήνιοι Δρομείς</a></div></section>
 
+<h2>
+
+Επικοινωνία με τους Παλλήνιους Δρομείς
+
+</h2>
+
+
+
+
+
+<div class="email-box">
+
+
+📧 Email Συλλόγου
+
+
+<br><br>
+
+
+<a href="mailto:pallinioidromeis@gmail.com">
+
+pallinioidromeis@gmail.com
+
+</a>
+
+
+<br>
+
+
+<a href="mailto:pallinioidromeis@yahoo.com">
+
+pallinioidromeis@yahoo.com
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="social-title">
+
+Ακολουθήστε μας στα Social Media
+
+</div>
+
+
+
+
+
+
+<a class="social-button"
+
+href="https://www.instagram.com/pallinioidromeis/"
+
+target="_blank">
+
+📷 Instagram<br>
+
+@pallinioidromeis
+
+</a>
+
+
+
+
+
+
+
+<a class="social-button"
+
+href="https://www.facebook.com/PALLINI0IDR0MEIS"
+
+target="_blank">
+
+👍 Facebook<br>
+
+Παλλήνιοι Δρομείς
+
+</a>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<!-- ================= MEMBER BUTTON ================= -->
+
+
+<a class="member-button"
+
+href="https://docs.google.com/forms/d/e/1FAIpQLSdyOeB3TkOv_56ZEMAT5_7VvpptlENomtCvIJDAaizdkoRzAA/viewform"
+
+target="_blank">
+
+Γίνε μέλος των Παλλήνιων Δρομέων
+
+</a>
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
 
 
 <footer class="footer">
@@ -318,5 +732,30 @@ tr:nth-child(even){
 Powered by EmyBerry
 
 </footer>
+
+
+
+
+
+
+
+<script>
+
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("show");
+
+}
+
+
+</script>
+
+
+
+
 </body>
+
 </html>
