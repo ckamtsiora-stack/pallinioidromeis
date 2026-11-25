@@ -1,780 +1,122 @@
 <!DOCTYPE html>
 <html lang="el">
-
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLR9Y5C6YE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YLR9Y5C6YE');
-</script>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Δραστηριότητες Συλλόγου - Παλλήνιοι Δρομείς</title>
-
-
-<style>
-
-
-* {
-    box-sizing:border-box;
-}
-
-
-
-body {
-
-    margin:0;
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:#f5f5f5;
-
-    color:#333;
-
-}
-
-
-
-
-/* ================= MENU ================= */
-
-
-.navbar {
-
-    width:100%;
-
-    background:#0B5D1E;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:10px 30px;
-
-}
-
-
-
-.nav-logo {
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    color:white;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-}
-
-
-
-.nav-logo img {
-
-    width:55px;
-
-    height:55px;
-
-    object-fit:contain;
-
-}
-
-
-
-.nav-links {
-
-    display:flex;
-
-    list-style:none;
-
-    gap:12px;
-
-    margin:0;
-
-    padding:0;
-
-}
-
-
-
-.nav-links a {
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    padding:12px 25px;
-
-    border-radius:25px;
-
-    transition:0.3s;
-
-}
-
-
-
-.nav-links a:hover {
-
-    background:#8BC34A;
-
-    transform:translateY(-2px);
-
-}
-
-
-
-
-.hamburger {
-
-    display:none;
-
-    color:white;
-
-    font-size:35px;
-
-    cursor:pointer;
-
-}
-
-
-
-
-
-/* ================= HEADER ================= */
-
-
-.header {
-
-    max-width:960px;
-
-    margin:auto;
-
-    background:white;
-
-    text-align:center;
-
-    padding:35px 20px;
-
-}
-
-
-
-.title {
-
-    color:#0B5D1E;
-
-    font-size:48px;
-
-    margin:0;
-
-}
-
-
-
-
-/* ================= ACTIVITIES ================= */
-
-
-.activities {
-
-    max-width:960px;
-
-    margin:35px auto;
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:15px;
-
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
-
-}
-
-
-
-.activities h2 {
-
-    color:#0B5D1E;
-
-    text-align:center;
-
-    font-size:30px;
-
-    margin-top:0;
-
-    margin-bottom:35px;
-
-}
-
-
-
-.activity-box {
-
-    margin-bottom:30px;
-
-    padding-bottom:25px;
-
-    border-bottom:1px solid #ddd;
-
-}
-
-
-
-.activity-box:last-child {
-
-    border-bottom:none;
-
-}
-
-
-
-.activity-box h3 {
-
-    color:#0B5D1E;
-
-    font-size:22px;
-
-    margin-bottom:12px;
-
-}
-
-
-
-.activity-box p {
-
-    font-size:17px;
-
-    line-height:1.7;
-
-    text-align:justify;
-
-}
-
-
-
-.activity-box strong {
-
-    color:#0B5D1E;
-
-}
-
-
-
-
-/* ================= MEMBER BUTTON ================= */
-
-
-.member-button {
-
-    display:block;
-
-    width:max-content;
-
-    margin:35px auto;
-
-    padding:15px 35px;
-
-    background:#0B5D1E;
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    font-size:18px;
-
-    border-radius:35px;
-
-    transition:0.3s;
-
-}
-
-
-
-.member-button:hover {
-
-    background:#8BC34A;
-
-    transform:translateY(-3px);
-
-}
-
-
-
-
-
-/* ================= FOOTER ================= */
-
-
-.footer {
-
-    text-align:center;
-
-    padding:25px;
-
-    color:#777;
-
-    font-size:14px;
-
-}
-
-
-
-
-/* ================= MOBILE ================= */
-
-
-@media(max-width:700px){
-
-
-.navbar {
-
-    padding:10px 15px;
-
-}
-
-
-
-.nav-logo {
-
-    font-size:18px;
-
-}
-
-
-
-.nav-logo img {
-
-    width:45px;
-
-    height:45px;
-
-}
-
-
-
-.hamburger {
-
-    display:block;
-
-}
-
-
-
-
-.nav-links {
-
-    position:absolute;
-
-    top:65px;
-
-    right:15px;
-
-    width:240px;
-
-    background:#0B5D1E;
-
-    border-radius:15px;
-
-    flex-direction:column;
-
-    overflow:hidden;
-
-    opacity:0;
-
-    transform:translateY(-20px);
-
-    pointer-events:none;
-
-    transition:0.3s;
-
-}
-
-
-
-.nav-links.show {
-
-    opacity:1;
-
-    transform:translateY(0);
-
-    pointer-events:auto;
-
-}
-
-
-
-
-.nav-links li {
-
-    width:100%;
-
-}
-
-
-
-.nav-links a {
-
-    display:block;
-
-    text-align:center;
-
-    padding:18px;
-
-    border-radius:0;
-
-}
-
-
-
-.header {
-
-    padding:25px 15px;
-
-}
-
-
-
-.title {
-
-    font-size:34px;
-
-}
-
-
-
-.activities {
-
-    margin:20px 15px;
-
-    padding:25px;
-
-}
-
-
-
-.activity-box p {
-
-    text-align:left;
-
-}
-
-
-
-.member-button {
-
-    width:90%;
-
-    text-align:center;
-
-}
-
-
-
-}
-
-
-
-</style>
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLR9Y5C6YE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YLR9Y5C6YE');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Οι δραστηριότητες των Παλλήνιων Δρομέων: 4ος Παλλήνιος Δρόμος, ομαδικές προπονήσεις, συμμετοχές σε αγώνες, κοπή πίτας και φιλανθρωπικές δράσεις.">
+    <title>Δραστηριότητες Συλλόγου - Παλλήνιοι Δρομείς</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-
-
-<!-- ================= MENU ================= -->
-
-
-<nav class="navbar">
-
-
-<div class="nav-logo">
-
-
-<img src="Παλλήνιοι Δρομείς Logo High resolution.jpg"
-     alt="Παλλήνιοι Δρομείς Logo">
-
-
-<span>
-Παλλήνιοι Δρομείς
-</span>
-
-
-</div>
-
-
-
-
-<div class="hamburger" onclick="toggleMenu()">
-
-☰
-
-</div>
-
-
-
-
-<ul class="nav-links" id="navLinks">
-
-
-<li>
-<a href="index.html">Αρχική</a>
-</li>
-
-
-<li>
-<a href="link1.html">Ο Σύλλογος</a>
-</li>
-
-
-<li>
-<a href="link2.html">Δραστηριότητες</a>
-</li>
-
-
-<li>
-<a href="link3.html">Αγώνες</a>
-</li>
-
-
-<li>
-<a href="link4.html">Επικοινωνία</a>
-</li>
-
-
-</ul>
-
-
-</nav>
-
-<!-- ================= HEADER ================= -->
-
-<!-- ================= ACTIVITIES ================= -->
-
-
-<main class="activities">
-
-
-<h2>
-Δραστηριότητες Συλλόγου
-</h2>
-
-<div class="activity-box">
-
-
-<h3>
-➜ Παλλήνιος Δρόμος
-</h3>
-
-
-<p>
-
-Το 2026 πραγματοποιήθηκε με μεγάλη επιτυχία ο
-<strong>3ος Παλλήνιος Δρόμος</strong>
-στην Παλλήνη Αττικής.
-
-Η διοργάνωση περιλάμβανε αγώνες
-<strong>5 km</strong>,
-<strong>10 km</strong>
-και παιδικό αγώνα
-<strong>1.000 μέτρων</strong>,
-προσελκύοντας εκατοντάδες δρομείς από όλη την Ελλάδα.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="activity-box">
-
-
-<h3>
-➜ Ετήσια κοπή πίτας
-</h3>
-
-
-<p>
-
-Κάθε χρόνο διοργανώνεται η καθιερωμένη εκδήλωση
-κοπής της πρωτοχρονιάτικης πίτας.
-
-Κατά τη διάρκεια της βραδιάς βραβεύονται οι αθλητές
-του συλλόγου, πραγματοποιούνται κληρώσεις δώρων
-και τα μέλη έχουν την ευκαιρία να συναντηθούν
-σε μια όμορφη γιορτινή εκδήλωση.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="activity-box">
-
-
-<h3>
-➜ Ομαδικές συμμετοχές σε αγώνες
-</h3>
-
-
-<p>
-
-Οι <strong>Παλλήνιοι Δρομείς</strong> συμμετέχουμε οργανωμένα
-σε δεκάδες αγώνες δρόμου σε όλη την Ελλάδα.
-
-Κάθε χρόνο πραγματοποιούνται ομαδικές εγγραφές,
-με κορυφαία στιγμή τη συμμετοχή στον
-<strong>Αυθεντικό Μαραθώνιο της Αθήνας</strong>,
-όπου το 2025 ο σύλλογος συμμετείχε με περίπου
-<strong>70 δρομείς</strong>.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="activity-box">
-
-
-<h3>
-➜ Ομαδικές προπονήσεις
-</h3>
-
-
-<p>
-
-Οι εβδομαδιαίες ομαδικές προπονήσεις αποτελούν
-βασικό κομμάτι της λειτουργίας του συλλόγου.
-
-Προπονούμαστε σε άσφαλτο και βουνό,
-απολαμβάνοντας τη χαρά του τρεξίματος με ασφάλεια,
-παρέα και αλληλοϋποστήριξη.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="activity-box">
-
-
-<h3>
-➜ Φιλανθρωπικές δράσεις
-</h3>
-
-
-<p>
-
-Ο σύλλογος συμμετέχει ενεργά σε δράσεις κοινωνικής
-προσφοράς, προσφέροντας οικονομική βοήθεια ή
-είδη πρώτης ανάγκης σε ανθρώπους και φορείς
-που έχουν ανάγκη.
-
-Πιστεύουμε ότι ο αθλητισμός μπορεί να συμβάλλει
-ουσιαστικά και στην κοινωνική αλληλεγγύη.
-
-</p>
-
-
-</div>
-
-
-
-
-</main>
-
-
-
-
-
-
-
-<!-- ================= MEMBER BUTTON ================= -->
-
-
-<a class="member-button"
-
-href="https://docs.google.com/forms/d/e/1FAIpQLSdyOeB3TkOv_56ZEMAT5_7VvpptlENomtCvIJDAaizdkoRzAA/viewform"
-
-target="_blank">
-
-Γίνε μέλος των Παλλήνιων Δρομέων
-
-</a>
-
-
-
-
-
-
-
-<!-- ================= FOOTER ================= -->
-
-
-<footer class="footer">
-
-Powered by EmyBerry
-
-</footer>
-
-
-
-
-
-
-<script>
-
-
-function toggleMenu(){
-
-document
-.getElementById("navLinks")
-.classList.toggle("show");
-
-}
-
-
-</script>
-
-
-
-
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Παλλήνιοι Δρομείς Logo High resolution.jpg" alt="Παλλήνιοι Δρομείς Logo">
+                <span>Παλλήνιοι Δρομείς</span>
+            </a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Άνοιγμα μενού">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="link1.html">Ο Σύλλογος</a></li>
+                <li><a href="link2.html" class="active">Δραστηριότητες</a></li>
+                <li><a href="link3.html">Αγώνες</a></li>
+                <li><a href="link4.html">Επικοινωνία</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Δραστηριότητες Συλλόγου</h1>
+        <p>Οι διοργανώσεις, οι προπονήσεις και η κοινωνική μας δράση</p>
+    </header>
+
+    <main class="container">
+        <div class="activities-grid">
+            <article class="activity-card featured-card">
+                <div class="activity-icon">🚩</div>
+                <h3>4ος Παλλήνιος Δρόμος – 16 Μαΐου 2027</h3>
+                <p>
+                    Οργανώνουμε τον <strong>4ο Παλλήνιο Δρόμο</strong> στις <strong>16 Μαΐου 2027</strong> στην Παλλήνη Αττικής. Οι εγγραφές έχουν ήδη ανοίξει!
+                </p>
+                <a class="card-link-btn" href="https://pallinirun.gr" target="_blank" rel="noopener noreferrer">
+                    Εγγραφές στο pallinirun.gr →
+                </a>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-icon">🏅</div>
+                <h3>Παλλήνιος Δρόμος</h3>
+                <p>
+                    Το 2026 πραγματοποιήθηκε με μεγάλη επιτυχία ο <strong>3ος Παλλήνιος Δρόμος</strong> στην Παλλήνη Αττικής. Η διοργάνωση περιλάμβανε αγώνες <strong>5 km</strong>, <strong>10 km</strong> και παιδικό αγώνα <strong>1.000 μέτρων</strong>, προσελκύοντας εκατοντάδες δρομείς από όλη την Ελλάδα[cite: 12].
+                </p>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-icon">🎉</div>
+                <h3>Ετήσια κοπή πίτας</h3>
+                <p>
+                    Κάθε χρόνο διοργανώνεται η καθιερωμένη εκδήλωση κοπής της πρωτοχρονιάτικης πίτας. Κατά τη διάρκεια της βραδιάς βραβεύονται οι αθλητές του συλλόγου, πραγματοποιούνται κληρώσεις δώρων και τα μέλη έχουν την ευκαιρία να συναντηθούν σε μια όμορφη γιορτινή εκδήλωση[cite: 12].
+                </p>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-icon">🇬🇷</div>
+                <h3>Ομαδικές συμμετοχές σε αγώνες</h3>
+                <p>
+                    Οι <strong>Παλλήνιοι Δρομείς</strong> συμμετέχουμε οργανωμένα σε δεκάδες αγώνες δρόμου σε όλη την Ελλάδα. Κάθε χρόνο πραγματοποιούνται ομαδικές εγγραφές, με κορυφαία στιγμή τη συμμετοχή στον <strong>Αυθεντικό Μαραθώνιο της Αθήνας</strong>, με συμμετοχή περίπου <strong>90 δρομέων</strong>.
+                </p>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-icon">👟</div>
+                <h3>Ομαδικές προπονήσεις</h3>
+                <p>
+                    Οι εβδομαδιαίες ομαδικές προπονήσεις αποτελούν βασικό κομμάτι της λειτουργίας του συλλόγου. Προπονούμαστε σε άσφαλτο και βουνό, απολαμβάνοντας τη χαρά του τρεξίματος με ασφάλεια, παρέα και αλληλοϋποστήριξη[cite: 12].
+                </p>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-icon">❤️</div>
+                <h3>Φιλανθρωπικές δράσεις</h3>
+                <p>
+                    Ο σύλλογος συμμετέχει ενεργά σε δράσεις κοινωνικής προσφοράς, προσφέροντας οικονομική βοήθεια ή είδη πρώτης ανάγκης σε ανθρώπους και φορείς που έχουν ανάγκη. Πιστεύουμε ότι ο αθλητισμός μπορεί να συμβάλλει ουσιαστικά και στην κοινωνική αλληλεγγύη[cite: 12].
+                </p>
+            </article>
+        </div>
+
+        <section class="cta-banner" style="margin-top: 36px;">
+            <h3>Έλα στις προπονήσεις και τις δράσεις μας</h3>
+            <p>Γίνε μέλος των Παλλήνιων Δρομέων και πάρε μέρος σε όλες τις επόμενες δραστηριότητες.</p>
+            <a class="btn btn-accent" href="https://docs.google.com/forms/d/e/1FAIpQLSdyOeB3TkOv_56ZEMAT5_7VvpptlENomtCvIJDAaizdkoRzAA/viewform" target="_blank">
+                Γίνε μέλος των Παλλήνιων Δρομέων
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Αρχική</a>
+            <a href="link1.html">Ο Σύλλογος</a>
+            <a href="link2.html">Δραστηριότητες</a>
+            <a href="link3.html">Αγώνες</a>
+            <a href="link4.html">Επικοινωνία</a>
+        </div>
+        <p>© 2017–2026 Παλλήνιοι Δρομείς • Powered by EmyBerry</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script>
 </body>
-
 </html>

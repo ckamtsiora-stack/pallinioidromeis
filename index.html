@@ -1,584 +1,142 @@
 <!DOCTYPE html>
 <html lang="el">
-
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YLR9Y5C6YE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YLR9Y5C6YE');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Παλλήνιοι Δρομείς </title>
-
-<style>
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
-}
-
-
-/* ================= NAVIGATION ================= */
-
-
-.navbar {
-
-    width:100%;
-    background:#0B5D1E;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:10px 30px;
-
-}
-
-
-/* LOGO MENU */
-
-.nav-logo {
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    color:white;
-    font-size:22px;
-    font-weight:bold;
-
-}
-
-
-.nav-logo img {
-
-    width:55px;
-    height:55px;
-    object-fit:contain;
-
-}
-
-
-
-/* LINKS */
-
-.nav-links {
-
-    display:flex;
-    list-style:none;
-    gap:12px;
-
-    margin:0;
-    padding:0;
-
-}
-
-
-.nav-links a {
-
-    color:white;
-    text-decoration:none;
-
-    font-weight:bold;
-
-    padding:12px 25px;
-
-    border-radius:25px;
-
-    transition:0.3s;
-
-}
-
-
-.nav-links a:hover {
-
-    background:#8BC34A;
-
-    transform:translateY(-2px);
-
-}
-
-
-/* HAMBURGER */
-
-
-.hamburger {
-
-    display:none;
-
-    color:white;
-
-    font-size:35px;
-
-    cursor:pointer;
-
-}
-
-
-
-
-/* ================= HEADER ================= */
-
-
-.header {
-
-    max-width:960px;
-
-    margin:auto;
-
-    background:white;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:35px 20px;
-
-}
-
-
-.title {
-
-    color:#0B5D1E;
-
-    font-size:48px;
-
-    margin:0;
-
-    text-align:center;
-
-}
-
-
-
-.logo-main {
-
-    display:none;
-
-}
-
-
-
-/* ================= CONTENT ================= */
-
-
-.content {
-
-    max-width:960px;
-
-    margin:30px auto;
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:15px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.12);
-
-}
-
-
-
-h2 {
-
-    color:#0B5D1E;
-
-    text-align:center;
-
-}
-
-
-
-table {
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin-top:25px;
-
-}
-
-
-
-td {
-
-    border:1px solid #aaa;
-
-    padding:12px;
-
-}
-
-
-
-tr:nth-child(even){
-
-    background:#f2f2f2;
-
-}
-
-
-
-
-/* ================= FOOTER ================= */
-
-
-.footer {
-
-    text-align:center;
-
-    padding:25px;
-
-    color:#777;
-
-}
-
-
-
-/* ================= MOBILE ================= */
-
-
-@media(max-width:700px){
-
-
-
-.navbar {
-
-    padding:10px 15px;
-
-}
-
-
-.nav-logo {
-
-    font-size:18px;
-
-}
-
-
-.nav-logo img {
-
-    width:45px;
-
-    height:45px;
-
-}
-
-
-
-.hamburger {
-
-    display:block;
-
-}
-
-
-
-/* κρυφό menu */
-
-.nav-links {
-
-    position:absolute;
-
-    top:65px;
-
-    right:15px;
-
-    width:240px;
-
-    background:#0B5D1E;
-
-    border-radius:15px;
-
-    flex-direction:column;
-
-    overflow:hidden;
-
-    opacity:0;
-
-    transform:translateY(-20px);
-
-    pointer-events:none;
-
-    transition:0.3s;
-
-}
-
-
-.nav-links.show {
-
-
-    opacity:1;
-
-    transform:translateY(0);
-
-    pointer-events:auto;
-
-
-}
-
-
-
-.nav-links li {
-
-    width:100%;
-
-}
-
-
-
-.nav-links a {
-
-    display:block;
-
-    text-align:center;
-
-    padding:18px;
-
-    border-radius:0;
-
-}
-
-
-
-.header {
-
-    padding:25px 15px;
-
-}
-
-
-
-.title {
-
-    font-size:34px;
-
-}
-
-
-
-.content {
-
-    margin:15px;
-
-    padding:20px;
-
-}
-
-
-
-}
-
-
-
-
-</style>
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLR9Y5C6YE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YLR9Y5C6YE');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Παλλήνιοι Δρομείς – Αθλητικός Σύλλογος Δρομέων με έδρα την Παλλήνη Αττικής. Από το 2017 προάγουμε το δρομικό κίνημα και τη συμμετοχή στον αθλητισμό.">
+    <title>Παλλήνιοι Δρομείς – Αθλητικός Σύλλογος Δρομέων στην Παλλήνη</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
-
 <body>
 
-
-
-<!-- MENU -->
-
-<nav class="navbar">
-
-
-<div class="nav-logo">
-
-<img src="Παλλήνιοι Δρομείς Logo High resolution.jpg">
-
-<span>
-Παλλήνιοι Δρομείς
-</span>
-
-</div>
-
-
-
-<div class="hamburger" onclick="toggleMenu()">
-
-☰
-
-</div>
-
-
-
-<ul class="nav-links" id="navLinks">
-
-
-<li>
-<a href="index.html">Αρχική</a>
-</li>
-
-
-<li>
-<a href="link1.html">Ο Σύλλογος</a>
-</li>
-
-
-<li>
-<a href="link2.html">Δραστηριότητες</a>
-</li>
-
-
-<li>
-<a href="link3.html">Αγώνες</a>
-</li>
-
-
-<li>
-<a href="link4.html">Επικοινωνία</a>
-</li>
-
-
-</ul>
-
-
-
-</nav>
-
-
-<!-- ΠΕΡΙΕΧΟΜΕΝΟ -->
-
-
-<main class="content">
-<h2>Παλλήνιοι Δρομείς – Αθλητικός Σύλλογος Δρομέων στην Παλλήνη</h2>
-<center>Οι Παλλήνιοι Δρομείς είναι αθλητικός σύλλογος δρομέων με έδρα την Παλλήνη Αττικής. 
-<br>Από το 2017 προάγουμε το δρομικό κίνημα, τη συμμετοχή στον αθλητισμό και την αγάπη για το τρέξιμο, διοργανώνοντας και συμμετέχοντας σε αγώνες δρόμου και αθλητικές δράσεις.
-<h2>
-
-
-<br>
-<section class="photos">
-<center>
-
-<img src="marathon.jpg"  height="250"
-     style="border-radius: 15px; object-fit: cover;"
-     alt="Παλλήνιοι Δρομείς">
-
-<img src="1.jpg"  height="250"
-     style="border-radius: 15px; object-fit: cover;"
-     alt="Παλλήνιοι Δρομείς">
-<br>
-<img src="2.jpg"  height="250"
-     style="border-radius: 15px; object-fit: cover;"
-     alt="Παλλήνιοι Δρομείς">
-<img src="3.jpg"  height="250"
-     style="border-radius: 15px; object-fit: cover;"
-     alt="Παλλήνιοι Δρομείς">
-<img src="4.jpg"  height="250"
-     style="border-radius: 15px; object-fit: cover;"
-     alt="Παλλήνιοι Δρομείς">
-
-<br>
-<br>
-<br>
-<br>
-
-
-Διοικητικό Συμβούλιο Παλλήνιων Δρομέων
-</h2>
-
-
-
-<table>
-
-
-<tr>
-<td>Γιώργος Καραναστάσης</td>
-<td>Πρόεδρος</td>
-</tr>
-
-
-<tr>
-<td>Σωτήρης Γοργότσιας</td>
-<td>Αντιπρόεδρος</td>
-</tr>
-
-
-<tr>
-<td>Χρυσόθεμις Καμτσιώρα</td>
-<td>Γραμματέας</td>
-</tr>
-
-
-<tr>
-<td>Θανάσης Πάφος</td>
-<td>Ταμίας</td>
-</tr>
-
-
-<tr>
-<td>Μαρία Φράγκου</td>
-<td>Μέλος</td>
-</tr>
-
-
-<tr>
-<td>Διονύσης Σαρδελάς</td>
-<td>Μέλος</td>
-</tr>
-
-
-<tr>
-<td>Μανώλης Μαρκάκης</td>
-<td>Μέλος</td>
-</tr>
-
-
-</table>
-
-
-</main>
-
-
-
-
-
-<footer class="footer">
-
-Powered by EmyBerry
-
-</footer>
-
-
-
-
-
-<script>
-
-
-function toggleMenu(){
-
-document
-.getElementById("navLinks")
-.classList.toggle("show");
-
-}
-
-
-</script>
-
-
-
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Παλλήνιοι Δρομείς Logo High resolution.jpg" alt="Παλλήνιοι Δρομείς Logo">
+                <span>Παλλήνιοι Δρομείς</span>
+            </a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Άνοιγμα μενού">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Αρχική</a></li>
+                <li><a href="link1.html">Ο Σύλλογος</a></li>
+                <li><a href="link2.html">Δραστηριότητες</a></li>
+                <li><a href="link3.html">Αγώνες</a></li>
+                <li><a href="link4.html">Επικοινωνία</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="hero-badge">Έτος Ίδρυσης 2017 • Παλλήνη Αττικής</span>
+            <h1>Παλλήνιοι Δρομείς</h1>
+            <p>
+                Οι Παλλήνιοι Δρομείς είναι αθλητικός σύλλογος δρομέων με έδρα την Παλλήνη Αττικής. 
+                Από το 2017 προάγουμε το δρομικό κίνημα, τη συμμετοχή στον αθλητισμό και την αγάπη για το τρέξιμο, διοργανώνοντας και συμμετέχοντας σε αγώνες δρόμου και αθλητικές δράσεις.
+            </p>
+            <div class="hero-actions">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyOeB3TkOv_56ZEMAT5_7VvpptlENomtCvIJDAaizdkoRzAA/viewform" target="_blank" class="btn btn-accent">
+                    Γίνε μέλος του Συλλόγου
+                </a>
+                <a href="link3.html" class="btn btn-outline">
+                    Οι Αγώνες μας
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2 class="section-title">Στιγμές από τους Αγώνες μας</h2>
+            <p class="section-subtitle">Η ομάδα μας σε δράση σε διοργανώσεις σε όλη την Ελλάδα</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="marathon.jpg" alt="Παλλήνιοι Δρομείς στον Μαραθώνιο">
+                </div>
+                <div class="gallery-item">
+                    <img src="1.jpg" alt="Ομαδική φωτογραφία Παλλήνιοι Δρομείς">
+                </div>
+                <div class="gallery-item">
+                    <img src="2.jpg" alt="Δρομείς του συλλόγου σε νυχτερινό αγώνα">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.jpg" alt="Τερματισμός και μετάλλια Παλλήνιοι Δρομείς">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.jpg" alt="Συμμετοχή Παλλήνιων Δρομέων σε αγώνα δρόμου">
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Διοικητικό Συμβούλιο Παλλήνιων Δρομέων</h2>
+            <p class="section-subtitle">Η διοικητική ομάδα που συντονίζει τις δράσεις του συλλόγου</p>
+            <div class="table-wrapper">
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>Ονοματεπώνυμο</th>
+                            <th>Ιδιότητα</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="member-name">Γιώργος Καραναστάσης</td>
+                            <td><span class="role-badge president">Πρόεδρος</span></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name">Σωτήρης Γοργότσιας</td>
+                            <td><span class="role-badge">Αντιπρόεδρος</span></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name">Χρυσόθεμις Καμτσιώρα</td>
+                            <td><span class="role-badge">Γραμματέας</span></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name">Θανάσης Πάφος</td>
+                            <td><span class="role-badge">Ταμίας</span></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name">Μαρία Φράγκου</td>
+                            <td><span class="role-badge">Μέλος</span></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name">Διονύσης Σαρδελάς</td>
+                            <td><span class="role-badge">Μέλος</span></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name">Μανώλης Μαρκάκης</td>
+                            <td><span class="role-badge">Μέλος</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Αρχική</a>
+            <a href="link1.html">Ο Σύλλογος</a>
+            <a href="link2.html">Δραστηριότητες</a>
+            <a href="link3.html">Αγώνες</a>
+            <a href="link4.html">Επικοινωνία</a>
+        </div>
+        <p>© 2017–2026 Παλλήνιοι Δρομείς • Powered by EmyBerry</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script>
 </body>
-
 </html>
